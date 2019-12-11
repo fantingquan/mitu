@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="40dp">
+
+    <ImageView
+        android:id="@+id/state_error_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/no_data" />
+
+    <TextView
+        android:id="@+id/text_error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/error_message"
+        android:textColor="@color/c_a5a4a4"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/btn_retry"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_retry_btn_ripple"
+        android:gravity="center"
+        android:text="@string/error_reload"
+        android:textColor="@color/c_ff6b7b"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

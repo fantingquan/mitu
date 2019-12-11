@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.mitu.android"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
+
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.6.5-20190718211159-noUtdid', ext: 'aar')
+
+    // Dagger 2  注入
+    implementation "com.google.dagger:dagger:2.15"
+    kapt "com.google.dagger:dagger-compiler:2.15"
+
+    //沉浸式状态栏、导航栏
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    //消息传递
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    //glide 图片处理
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+
+    //今日头条布局适配
+    implementation 'me.jessyan:autosize:1.1.0'
+    //知乎图片选择框架
+    implementation 'com.zhihu.android:matisse:0.5.2'
+    //阴影处理
+    implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
+    //标签
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    //圆形图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //时间选择器、省市区三级联动
+    implementation 'com.bigkoo:pickerview:2.1.1'
+    //权限
+    implementation 'com.master.android:permissionhelper:2.0'
+
+}

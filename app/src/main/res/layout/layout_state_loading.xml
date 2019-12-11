@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="40dp">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cornerRadius="10dp"
+        app:shadowColor="@color/black_10"
+        app:backgroundColor="@color/white"
+        app:shadowDy="2"
+        app:shadowMargin="10dp"
+        app:shadowRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/drawable_progress_loading" />
+
+            <TextView
+                android:id="@+id/tipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/loading"
+                android:textColor="@color/c_202932"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </com.loopeer.shadow.ShadowView>
+
+</RelativeLayout>
